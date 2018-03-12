@@ -13,7 +13,7 @@ page = agent.get("http://www.espncricinfo.com/ci/engine/series/index.html?search
 p page.at('div.content')
 #
 # # Write out to the sqlite database using scraperwiki library
-ScraperWiki.save_sqlite(["Tests"], {"name" => "South Africa v Australia", "venue"=> "at Cape Town"})
+ScraperWiki.save_sqlite([:name], {"name" => "South Africa v Australia", "venue"=> "at Cape Town"})
 #
 # # An arbitrary query against the database
 # You don't have to do things with the Mechanize or ScraperWiki libraries.
