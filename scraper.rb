@@ -10,13 +10,13 @@ agent = Mechanize.new
 page = agent.get("http://www.espncricinfo.com/ci/engine/series/index.html?search=test;view=month")
 #
 # Find somehing on the page using css selectors
-# p page.at('div.content')
+p page.at('div.content')
 #
 # # Write out to the sqlite database using scraperwiki library
-# ScraperWiki.save_sqlite(["name"], {"name" => "susan", "occupation" => "software developer"})
+ScraperWiki.save_sqlite(["Tests"], {"name" => "", "date" => "", "venue"=> ""})
 #
 # # An arbitrary query against the database
-# ScraperWiki.select("* from data where 'name'='peter'")
+ScraperWiki.select("* from data where 'name'='peter'")
 
 # You don't have to do things with the Mechanize or ScraperWiki libraries.
 # You can use whatever gems you want: https://morph.io/documentation/ruby
