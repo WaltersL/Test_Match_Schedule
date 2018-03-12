@@ -10,7 +10,7 @@ agent = Mechanize.new
 page = agent.get("http://www.espncricinfo.com/ci/engine/series/index.html?search=test;view=month")
 #
 # Find somehing on the page using css selectors
-p page.at('div.content')
+series = page.at('div.copy match-info').
 #
 # # Write out to the sqlite database using scraperwiki library
 ScraperWiki.save_sqlite([:name], {"name" => "South Africa v Australia", "venue"=> "at Cape Town"})
